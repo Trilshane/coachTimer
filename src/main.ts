@@ -1,7 +1,7 @@
 import "./style.scss";
 import createElement from "./createElement";
 
-const app = document.querySelector("#app");
+const app: HTMLElement | null = document.querySelector("#app");
 
 // Табы выбора секции
 const tabZone = createElement({
@@ -56,7 +56,7 @@ const btnResult = createElement({
   proops: [{ class: "resultBtn btn" }],
   parent: stopwatchButtonZone,
 });
-let stopwatchID = null;
+let stopwatchID: number = 0;
 
 function startCompitition() {
   let min = 0;
@@ -81,8 +81,8 @@ function startCompitition() {
   }, 16.6666);
 }
 
-btnStart.onclick = (event) => {
-  if (event.target.textContent === "начать соревнование") {
+btnStart.onclick = (event: MouseEvent) => {
+  if (event.target?.textContent === "начать соревнование") {
     startCompitition();
     stopwatchButtonZone.style.justifyContent = "space-between";
     btnResult.style.display = "inline";
@@ -93,10 +93,10 @@ btnStart.onclick = (event) => {
     event.target.textContent = "начать соревнование";
     stopwatchButtonZone.style.justifyContent = "center";
     btnResult.style.display = "none";
-    athleteResults.length = 0;
+    athleteResults = [];
   }
 };
-const athleteResults = [];
+let athleteResults: (string | null)[] = [];
 
 btnResult.onclick = () => {
   athleteResults.push(stopwatch.textContent);

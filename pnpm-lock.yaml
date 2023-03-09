@@ -2,14 +2,14 @@ lockfileVersion: 5.4
 
 specifiers:
   sass: ^1.58.3
-  typescript: ^4.9.5
+  typescript: ^4.9.3
   vite: ^4.1.0
 
 dependencies:
   sass: 1.58.3
-  typescript: 4.9.5
 
 devDependencies:
+  typescript: 4.9.5
   vite: 4.1.4_sass@1.58.3
 
 packages:
@@ -414,7 +414,7 @@ packages:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: false
+    dev: true
 
   /vite/4.1.4_sass@1.58.3:
     resolution: {integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==}
